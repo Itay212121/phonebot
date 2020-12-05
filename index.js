@@ -315,7 +315,7 @@ client.on("message", (message) => {
         .setDescription("I am a fun bot that lets you talk with random people! \n you can add me to your server by clicking [here](https://discord.com/api/oauth2/authorize?client_id=784536508384280597&permissions=0&scope=bot) \n If you found any bugs, I would like to hear them in my [support server](https://discord.gg/jYSUjs7)")
         .setColor("BLUE")
         .addField("How To Start", "To start a chat, you need to use the command `" + prefix + "findcall` and it will find to you someone!")
-        .addField("How To Talk", "To say things to your conversion buddy you need to use the command `!talk <message>` and it will send to the other person what you said.")
+        .addField("How To Talk", "To say things to your conversion buddy you need to use the command `p!talk <message>` and it will send to the other person what you said.")
         .addField("How To Stop A Call", "To stop a call, you need to use the command `" + prefix + "`endcall and it will end the call!")
 
         .setFooter("Created By " + client.guilds.cache.find(g => g.id === "675004894436130816").members.cache.find(m => m.id === "439815568607019009").user.username, client.guilds.cache.find(g => g.id === "675004894436130816").members.cache.find(m => m.id === "439815568607019009").user.displayAvatarURL())
