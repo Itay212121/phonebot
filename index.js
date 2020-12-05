@@ -1,12 +1,15 @@
-const token = "Nzg0NTM2NTA4Mzg0MjgwNTk3.X8qujw.G8OjVFNKrET5iv6DrLH6RhFuI7U"
 const discord = require("discord.js")
 const prefix = "p!";
 const client = new discord.Client()
 const db = require("quick.db")
+require('dotenv').config()
+
+const token = process.env.token
+
 
 client.on("ready", () => {
     console.log("This bot Is Online");
-    client.user.setActivity('Me Getting Developed', { type: 'WATCHING' });
+    client.user.setActivity('People Talking!', { type: 'WATCHING' });
 
 
 })
