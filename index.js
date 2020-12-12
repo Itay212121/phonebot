@@ -69,42 +69,8 @@ client.on("message", (message) => {
 
                     }
                 )
-                var DotsCounter = 3
-                var loopCounter = 0
-                
-                setInterval(() => {
-                    var IsFinishLooping = loopCounter > 6;
-                    if(IsFinishLooping) return;
-                    var dotsString = ""
-
-                    if(DotsCounter == 3) {
-                        DotsCounter = 1
-                        dotsString = ".";
-
-                    };
-                    if(DotsCounter == 2) {
-                        DotsCounter = 3;
-                        dotsString = "...";
-                    }
-                    if(DotsCounter == 1) {
-                        DotsCounter = 2;
-                        dotsString = "..";
-                    }
-
-
-                    const newEmbed = new discord.MessageEmbed()
-                    .setTitle("Looking For Member")
-                    .setDescription("Looking for another person to use this command too" + dotsString)
-                    .setColor("GREEN")
-                    m.edit(newEmbed);
-
-                    
-
-
-
-
-                }, 700)
             })
+               
         }else{
             var otherMemberInfo = db.fetch("call_finder");
             if(otherMemberInfo.authorID == message.member.id){
